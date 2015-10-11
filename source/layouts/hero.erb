@@ -1,0 +1,26 @@
+<% wrap_layout :layout do %>
+  <div class="row">
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-2"><img src="<%= img_src "heroes", current_page.data.hero %>" alt="<%= data.heroes[current_page.data.hero].dname  %>" class="img-responsive img-rounded"></div>
+        <div class="col-md-6">
+          <h4><%= data.heroes[current_page.data.hero].dname  %></h4>
+          <%= data.heroes[current_page.data.hero].droles  %>
+        </div>
+        <div class="col-md-4 text-right">
+          <% current_page.data.abilities.each do |a| %>
+            <%= ability a.id, icon: true, height: 42, width: :auto %>
+          <% end %>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+<% end %>

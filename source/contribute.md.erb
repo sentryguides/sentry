@@ -1,0 +1,50 @@
+---
+title: Introducing Sentry
+---
+
+## Contribute
+
+Sentry is community driven, everyone can help improving it.
+
+Creating and modifying Guides requires the
+use of Git, Ruby and Markdown. If you have no idea what
+I'm talking about - sorry, we might look into making things easier in the future.
+
+Now, lets dive straight in. Sentry is built on top of the static site generator
+[Middleman](https://middlemanapp.com/). Everything you see here is Open Source and
+on [GitHub](https://github.com/jgillich/sentry). All you have to do is to install
+Middleman, download the source and you are ready to go.
+
+#### Writing Guides
+
+Guides live in `source/heroes`, and are `.md.erb` documents, basically they are
+Markdown documents with some templating magic. To create a new guide, we first have
+to look up the correct id for our hero. They are listed in `data/heroes.yml`.
+Usually that is just the regular name in lowercase, with underscores as separators.
+
+All guides start with a block called frontmatter, like this:
+
+<pre>
+---
+title: Crystal Maiden Guide
+hero: crystal_maiden
+layout: hero
+index: true
+---
+</pre>
+
+It defines some general properties about our guide and is not part of the guide itself.
+Title is simply the title of the site, `hero` is the hero id (same as file name).
+`index` defines wheter the guide is shown on the site, for drafts you would set it
+to `false`. There are some other fields not mentioned here, more about them later.
+
+Everything below this block is part of the actual guide. It uses Markdown for formatting
+and the ERB templating sytax for some fancier things like the summary or the
+pros/cons.
+
+#### Attribution and Ownership
+
+Guides are not authored by a single person, but by a community. Everyone is able to
+to make improvements, but we review all changes to keep the quality up.
+There are plans to display the top authors of each guide,
+but no promises at this point.

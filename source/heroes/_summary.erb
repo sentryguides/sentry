@@ -1,0 +1,28 @@
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item text-center">
+        <% current_page.data.summary.items.each do |name, items| %>
+          <span style="padding-left: 25px; padding-right: 25px;">
+            <% items.each do |item| %>
+              <%= item item, icon: true, height: 42, width: 42 %>
+            <% end %>
+          </span>
+        <% end %>
+      </li>
+      <li class="list-group-item text-center">
+        <% current_page.data.summary.abilities.gsub(/\s+/, "").split("").each_with_index do |hotkey, index| %>
+          <% if hotkey != "U" %>
+            <%= ability current_page.data.abilities.find {|a| a.hotkey == hotkey }.id, icon: true, height: 42, width: :auto %>
+          <% else %>
+            <img src="/images/stats.png" height="42">
+          <% end %>
+        <% end %>
+      </li>
+      <li class="list-group-item text-center">
+        <%= markdown yield %>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <title><%= current_page.data.title || "The Middleman" %></title>
+
+    <%= stylesheet_link_tag "normalize", "all" %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <%= javascript_include_tag  "all" %>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/0.5.9/lunr.min.js" type="text/javascript"></script>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <% navbar position: :static do %>
+      <% vertical do %>
+        <% link_to 'Sentry', "/index.html" %>
+      <% end %>
+      <% horizontal class: 'navbar-left' do %>
+        <% nav class: 'navbar-right' do %>
+          <% link_to 'Heroes', "/heroes/index.html" %>
+          <!--
+          <% link_to 'Items', "" %>
+          <% link_to 'Mechanics', "" %>
+          <% link_to 'Discuss', "" %>
+          -->
+          <% link_to 'Contribute', "/contribute.html" %>
+          <!--
+          <% link_to 'About', "" %>
+          -->
+        <% end %>
+      <% end %>
+    <% end %>
+    <div class="container">
+      <%= yield %>
+      <div class="row">
+        <div class="col-md-12">
+            <div class='text-muted'>
+              Dota 2 is a registered trademark of Valve Corporation.
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
