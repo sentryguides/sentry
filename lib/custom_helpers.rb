@@ -2,7 +2,7 @@
 
 module CustomHelpers
   def img_src(type, id)
-    return "http://cdn.dota2.com/apps/dota2/images/#{type}/#{id}_lg.png"
+    return "/images/dota/#{type}/#{id}_lg.png"
   end
 
   def item_tooltip(id, item)
