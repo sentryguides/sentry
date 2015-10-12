@@ -8,6 +8,7 @@ prose:
     - stylesheets
     - CNAME
     - search.json.erb
+    - heroes/_*
   metadata:
     heroes:
       - name: "layout"
