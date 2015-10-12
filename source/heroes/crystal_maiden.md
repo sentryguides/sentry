@@ -40,7 +40,7 @@ Use Frostbite to jungle - Wait for the right moment to use your ultimate
 ### Overview
 
 Crystal Maiden is a flexible support hero that provides team-wide mana
-regenaration, a disable on a short cooldown and a high-damage, although
+regeneration, a disable on a short cooldown and a high-damage, although
 hard to use, ultimate.
 
 <% partial :procon do %>
@@ -77,7 +77,7 @@ make the difference between winning and loosing a fight. Especially Heroes that 
 have mana issues, but don't want to build any regen items, like Slark or Bristleback, will
 be very happy to have Crystal Maiden in their team.
 
-If you team is not that dependant on the additional mana, you can choose to go for a
+If you team is not that dependent on the additional mana, you can choose to go for a
 more ganking oriented build and max Crystal Nova and Frostbite first.
 
 <%= ability :crystal_maiden_freezing_field %> is your channeled ultimate that deals
@@ -95,7 +95,7 @@ As starting items, get a set of <%= item :tango %>, one or two <%= item :clarity
 and <%= item :ward_observer %> as well as <%= item :courier %>. If you have the gold for it,
 get <%= item :ring_of_protection %>, otherwise go for 2x <%= item :branches %>.
 
-During the laning phase, you can hopefully get enough gold to aquire <%= item :tranquil_boots %>
+During the laning phase, you can hopefully get enough gold to acquire <%= item :tranquil_boots %>
 and <%= item :magic_wand %>.
 
 Your next choice depends on how well the game is going. If you contributed to a few
@@ -112,7 +112,7 @@ to channel your ultimate without interruptions. If you were able to channel your
 ultimate without interruption so far or abilities that can interrupt you go through
 Black King Bar (like <%= ability :vengefulspirit_nether_swap %>, <%= ability :pudge_meat_hook %> and a few others),
 you could also go straight into <%= item :ultimate_scepter %>. It buffs the damage
-and slow of your ultimate by quite a bit. These items hower are very expensive for a support,
+and slow of your ultimate by quite a bit. These items however are very expensive for a support,
 in most games you will not be able to afford them.
 
 #### Alternatives
@@ -122,7 +122,7 @@ making it easier to get as a support, and it doesn't break when you take damage.
 The downside is that Force Staff makes it a lot harder to position yourself correctly
 because its range is much shorter. It is also worse at ganks and chasing.
 
-<%= item :bracer %> is a good early game item to get when you are behind and have survivabity issues.
+<%= item :bracer %> is a good early game item to get when you are behind and have survivability issues.
 You can choose to build it into <%= item :ancient_janggo %> later.
 
 ### Gameplay

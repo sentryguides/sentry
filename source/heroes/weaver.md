@@ -131,7 +131,7 @@ To make up for the mana regeneration, <%= item :medallion_of_courage %> is also 
 Now, on to your first damage item, the <%= item :desolator %>. It allows you to
 melt through enemy supports, towers and Roshan alike. After Desolator, you can
 either opt for even more damage in the form of <%= item :greater_crit %> or for
-surviability in the form of <%= item :black_king_bar %> or <%= item :heart %>.
+survivability in the form of <%= item :black_king_bar %> or <%= item :heart %>.
 The decision is best made based on the team fights you had so far in the game.
 If you are suffering from heavy magic damage or disables, Black King Bar would be the choice.
 If you have general survivability issues, go for Heart of Tarrasque.
@@ -150,7 +150,7 @@ Maelstrom for less gold, especially considering that both items will be sold eve
  abilities (Phantom Assasin). If you are your team's main carry,
 you should almost always build Monkey King Bar. If you started on an offlane position,
 your main carry will usually build it and you do not have to, unless multiple enemies
-posess evasion items. If you do decide to build it, you should do so in place of Desolator
+possess evasion items. If you do decide to build it, you should do so in place of Desolator
 (usually against a Phantom Assasion) or Daedalus.
 
 ### Gameplay
