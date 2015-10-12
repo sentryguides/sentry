@@ -1,0 +1,9 @@
+prose:
+  rooturl: 'source'
+  siteurl: 'http://prose.github.io/starter/'
+  metadata:
+    heroes:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "hero"
