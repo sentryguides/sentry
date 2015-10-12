@@ -1,7 +1,4 @@
-all: data deps
-
-deps:
-	git clone -b v4-dev https://github.com/twbs/bootstrap.git _sass/bootstrap
+all: data assets
 
 data:
 	curl http://www.dota2.com/jsfeed/itemdata | ruby -ryaml -rjson -e 'puts YAML.dump(JSON.parse(STDIN.read)["itemdata"])' > data/items.yml
