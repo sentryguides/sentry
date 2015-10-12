@@ -1,3 +1,7 @@
+require "lib/custom_helpers"
+require "lib/rendering_hack"
+
+
 activate :blog do |blog|
   blog.prefix = "blog"
   blog.layout = "blog"
@@ -39,6 +43,8 @@ activate :lunr
 # Helpers
 ###
 
+helpers CustomHelpers
+
 activate :bh
 
 # Automatic image dimensions on image_tag helper
@@ -55,8 +61,8 @@ activate :bh
 #     "Helping"
 #   end
 # end
-require "lib/custom_helpers"
-helpers CustomHelpers
+
+
 
 
 set :css_dir, 'stylesheets'
