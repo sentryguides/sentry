@@ -1,9 +1,22 @@
 prose:
   rooturl: 'source'
   siteurl: 'http://prose.github.io/starter/'
+  ignore:
+    - images
+    - javascripts
+    - layouts
+    - stylesheets
+    - CNAME
+    - search.json.erb
   metadata:
     heroes:
       - name: "layout"
         field:
           element: "hidden"
           value: "hero"
+      - name: "title"
+        field:
+          label: "Title"
+      - name: "hero"
+        field:
+          label: "Hero Identifier"
