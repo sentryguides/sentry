@@ -9,6 +9,7 @@ prose:
     - CNAME
     - search.json.erb
     - heroes/_*
+    - _*
   metadata:
     heroes:
       - name: "layout"

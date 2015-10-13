@@ -19,6 +19,11 @@
           <%= yield %>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-12">
+          <%= partial :discourse %>
+        </div>
+      </div>
     </div>
     <div class="col-md-3">
       <a class="btn btn-block btn-info" href="http://prose.io/#jgillich/sentry/edit/master/source/heroes/<%= current_page.data.hero %>.md">Edit</a>
