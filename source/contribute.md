@@ -1,8 +1,7 @@
 ---
-title: Introducing Sentry
+title: Contribute
+layout: page
 ---
-
-## Contribute
 
 Sentry is community driven, everyone can help improving it. Next to each guide,
 you will find a big blue <a href="http://prose.io/#jgillich/sentry/edit/master/source/contribute.md" class="btn btn-info btn-xs">Edit</a> button, all you need
@@ -35,6 +34,7 @@ Frontmatter is the block at the start of a file. It looks like this:
     ---
 
 It defines some general properties about our guide and is not part of the guide itself.
-Title is simply the title of the site, `hero` is the hero id (same as file name).
-`index` defines wheter the guide is shown on the site, for drafts you would set it
-to `false`.
+
+* title: The title of the site
+* hero: The hero id, same as file name
+* index: Whether the guide is shown on the site
