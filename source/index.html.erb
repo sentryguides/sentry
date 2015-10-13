@@ -7,10 +7,18 @@ title: Sentry Guides
   <div class="col-md-12">
     <% panel do %>
       <div class='panel-body text-center'>
-        <img src="/images/logo.png" width="128">
         <h2>Uncover your hidden Dota skills</h2>
         <h4>Sentry provides high-quality guides that are constantly improved by the Community.</h4>
 
+        <p>
+          <% sitemap.where(:layout.equal => 'hero', :index.equal => true).order_by(:hero).limit(5).all.each do |page| %>
+              <a href="<%=  page.url %>">
+                <img src="<%= img_src "heroes", page.data.hero %>" alt="<%= page.data.hero %>" width="100">
+              </a>
+          <% end %>
+        </p>
+        <p><a class="btn btn-primary" href="/heroes/">View All</a></p>
+        <!-- Search does not work very well, hide for now
         <form class="form-inline" role="search">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Hero">
@@ -20,39 +28,44 @@ title: Sentry Guides
           <div class="search-results">
           </div>
         </form>
-
+      -->
       </div>
     <% end %>
   </div>
 </div>
+
 <div class="row">
-  <div class="col-md-3">
-    <% panel heading: 'Blog' do %>
+  <div class="col-md-9">
+    <% panel heading: 'Latest Blog Posts' do %>
       <ul class="list-group">
         <% blog.articles[0...5].each do |article| %>
-          <li class="list-group-item"><a href="<%= article.url %>"><%= article.title %></a></li>
+          <li class="list-group-item">
+            <h3><a href="<%= article.url %>"><%= article.title %></a></h3>
+            <%= article.summary %>
+          </li>
 
         <% end %>
       </ul>
     <% end %>
   </div>
-  <div class="col-md-6">
-    <% panel heading: 'Featured Guides' do %>
-    <div class='panel-body text-center'>
-      <% sitemap.where(:layout.equal => 'hero', :index.equal => true).order_by(:hero).limit(5).all.each do |page| %>
-          <a href="<%=  page.url %>">
-            <img src="<%= img_src "heroes", page.data.hero %>" alt="<%= page.data.hero %>" width="100">
-          </a>
-      <% end %>
-    </div>
-    <% end %>
-  </div>
   <div class="col-md-3">
-    <% panel heading: 'What goes here?' do %>
-      <ul class="list-group">
-          <li class="list-group-item">Who knows..</li>
+    <% panel heading: 'Latest Forum Topics' do %>
+      <ul class="list-group latest-posts">
+
 
       </ul>
     <% end %>
   </div>
 </div>
+
+<script>
+$(function () {
+  var json = 'https://forum.sentryguides.com/latest.json';
+  var $el = $('.latest-posts');
+  $.getJSON(json).done(function (latest) {
+    latest.topic_list.topics.forEach(function (topic) {
+      $el.append('<li class="list-group-item"><a href="https://forum.sentryguides.com/t/' + topic.slug + '">' + topic.title + '</a></li>');
+    });
+  });
+});
+</script>
