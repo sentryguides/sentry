@@ -21,18 +21,19 @@
           Sentry
         <% end %>
       <% end %>
-      <% horizontal class: 'navbar-left' do %>
-        <% nav class: 'navbar-right' do %>
+      <% horizontal do %>
+        <% nav class: 'navbar-left' do %>
           <% link_to 'Heroes', "/heroes/index.html" %>
           <!--
           <% link_to 'Items', "" %>
           <% link_to 'Mechanics', "" %>
           <% link_to 'Discuss', "" %>
-          -->
-          <% link_to 'Contribute', "/contribute.html" %>
-          <!--
           <% link_to 'About', "" %>
           -->
+        <% end %>
+        <% nav class: 'navbar-right' do %>
+          <% link_to 'Forum', "https://forum.sentryguides.com" %>
+          <% link_to 'GitHub', "https://github.com/jgillich/sentry" %>
         <% end %>
       <% end %>
     <% end %>
