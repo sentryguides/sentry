@@ -44,19 +44,18 @@ and still grab decent farm in most cases. However, being somewhat item-dependent
 playing him in the safe lane guarantees he will be useful later on.
 
 
-<% partial :procon do %>
-<% partial :pro do %>
+<% partial :pros_cons do %>
 * Requires a lot of lockdown to kill
 * Deals high damage
 * Can solo the offlane
 * Great at chasing and tower diving
 * Great farmer and splitpusher
-<% end %>
-<% partial :con do %>
+<%= separator %>
 * Low base stats and stat gain
 * Vulnerable to magic burst damage, stuns and silences
 <% end %>
-<% end %>
+
+
 
 ### Abilities
 

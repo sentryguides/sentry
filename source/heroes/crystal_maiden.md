@@ -43,16 +43,14 @@ Crystal Maiden is a flexible support hero that provides team-wide mana
 regeneration, a disable on a short cooldown and a high-damage, although
 hard to use, ultimate.
 
-<% partial :procon do %>
-<% partial :pro do %>
+
+<% partial :pros_cons do %>
 * Good disable and nukes
 * Team-wide mana regeneration can have a big impact on the outcome of fights
 * If used correctly, one of the highest damage dealing ultimates in the game
-<% end %>
-<% partial :con do %>
+<%= separator %>
 * Low health pool, armor and movement speed
 * Ultimate very difficult to use without mobility items
-<% end %>
 <% end %>
 
 ### Abilities

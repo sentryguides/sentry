@@ -67,6 +67,7 @@ module CustomHelpers
     Tilt[:markdown].new { source }.render
   end
 
-
-
+  def separator
+    "<!--SENTRY_CONTENT_SEPARATOR-->"
+  end
 end

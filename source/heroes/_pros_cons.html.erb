@@ -1,0 +1,11 @@
+<div class="row">
+  <% pro, con = yield.split(separator, 2) %>
+  <div class="col-md-6">
+    <h4>Pros</h4>
+    <%= markdown pro %>
+  </div>
+    <div class="col-md-6">
+      <h4>Cons</h4>
+      <%= markdown con %>
+    </div>
+</div>
