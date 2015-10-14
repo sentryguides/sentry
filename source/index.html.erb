@@ -40,8 +40,9 @@ title: Sentry Guides
       <ul class="list-group">
         <% blog.articles[0...5].each do |article| %>
           <li class="list-group-item">
+            <time><%= article.date.strftime('%b %e %Y') %></time>
             <h3><a href="<%= article.url %>"><%= article.title %></a></h3>
-            <%= article.summary %>
+            <%= article.body %>
           </li>
 
         <% end %>
@@ -50,10 +51,7 @@ title: Sentry Guides
   </div>
   <div class="col-md-3">
     <% panel heading: 'Latest Forum Topics' do %>
-      <ul class="list-group latest-posts">
-
-
-      </ul>
+      <ul class="list-group latest-posts"></ul>
     <% end %>
   </div>
 </div>

@@ -3,6 +3,7 @@
     <div class="col-md-9">
       <% panel do %>
         <div class="panel-body">
+          <time><%= current_page.date.strftime('%b %e %Y') %></time>
           <h1><%= current_page.title %></h1>
           <%= yield %>
         </div>

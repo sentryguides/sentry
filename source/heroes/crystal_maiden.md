@@ -43,7 +43,6 @@ Crystal Maiden is a flexible support hero that provides team-wide mana
 regeneration, a disable on a short cooldown and a high-damage, although
 hard to use, ultimate.
 
-
 <% partial :pros_cons do %>
 * Good disable and nukes
 * Team-wide mana regeneration can have a big impact on the outcome of fights
@@ -55,19 +54,19 @@ hard to use, ultimate.
 
 ## Abilities
 
-<%= ability :crystal_maiden_crystal_nova %> slows and damages enemies in a decent
+<%= ability :crystal_maiden_crystal_nova %> slows and damages enemies in a
 400 AoE. It deals less damage and has a higher cooldown than Frostbite, so unless you
 plan to be involved in early team fights where the AoE would be useful, this ability should be maxed last.
 
 <%= ability :crystal_maiden_frostbite %> freezes a unit in place, making them unable to move
-or attack and dealing up to 300 damage to heroes. They can still cast abilities or items
-like teleport scrolls, however. During the duration of Frostbite, you also get True Sight
+or attack, and deals up to 300 damage to heroes. They can still cast abilities or items
+like teleport scrolls. During the duration of Frostbite, you also get True Sight
 of the unit, so heroes like Riki can not turn invisible.
 
 Frostbite is your early ganking ability, you usually want it to be around the same level as
 Arcane Aura, otherwise you will run out of mana pretty quickly. Frostbite can also be used
 for jungling: Even on level 1, it always lasts 10 seconds on creeps and deals a total of
-1000 damage. This allows you to kill even the biggest jungle creeps easily.
+1000 damage. This allows you to kill the big jungle creeps easily.
 
 <%= ability :crystal_maiden_brilliance_aura %> is a global aura that grants additional
 mana regeneration to your team. It allows everyone to cast more spells, which can sometimes
@@ -80,12 +79,11 @@ more ganking oriented build and max Crystal Nova and Frostbite first.
 
 <%= ability :crystal_maiden_freezing_field %> is your channeled ultimate that deals
 heavy damage around you and slows movement and attack speed. It requires you
-to stand next to your enemies in order to damage them, which is why it is very easy
+to be close to your enemies in order to damage them, which is why it is very easy
 for them to interrupt you, making this ability difficult to use. More often than not,
 you will simply get stunned right after you've started to channel. This is why you
 have to surprise your opponents, blink in after they have already used their stuns
 and hope they don't burst you down too quickly or saved one stun for you.
-
 
 ## Items
 
@@ -107,10 +105,10 @@ you should eventually have both before moving on to the next item.
 
 In most games, will want <%= item :black_king_bar %> as your next item. It allows you
 to channel your ultimate without interruptions. If you were able to channel your
-ultimate without interruption so far or abilities that can interrupt you go through
+ultimate without interruption so far or your opponents have abilties that go through
 Black King Bar (like <%= ability :vengefulspirit_nether_swap %>, <%= ability :pudge_meat_hook %> and a few others),
 you could also go straight into <%= item :ultimate_scepter %>. It buffs the damage
-and slow of your ultimate by quite a bit. These items however are very expensive for a support,
+and slow of your ultimate. These items however are very expensive for a support,
 in most games you will not be able to afford them.
 
 #### Alternatives
@@ -118,7 +116,7 @@ in most games you will not be able to afford them.
 <%= item :force_staff %> is a good alternative to Blink. You can buy it in components,
 making it easier to get as a support, and it doesn't break when you take damage.
 The downside is that Force Staff makes it a lot harder to position yourself correctly
-because its range is much shorter. It is also worse at ganks and chasing.
+because its range is much shorter. It is also worse at ganking and chasing.
 
 <%= item :bracer %> is a good early game item to get when you are behind and have survivability issues.
 You can choose to build it into <%= item :ancient_janggo %> later.
