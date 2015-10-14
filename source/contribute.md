@@ -18,7 +18,7 @@ static site generator, so you'll need that one, too.
 
 Tooltips are created using the `ability`, `hero` or `item` helpers. Example:
 
-    <%= "\<\% ability :crystal_maiden_frostbite \%\>" %>
+    <%= "\<\%= ability :crystal_maiden_frostbite \%\>" %>
 
 Renders as: <%= ability :crystal_maiden_frostbite %>
 
