@@ -37,7 +37,7 @@ summary:
 Use Frostbite to jungle - Wait for the right moment to use your ultimate
 <% end %>
 
-### Overview
+## Overview
 
 Crystal Maiden is a flexible support hero that provides team-wide mana
 regeneration, a disable on a short cooldown and a high-damage, although
@@ -53,7 +53,7 @@ hard to use, ultimate.
 * Ultimate very difficult to use without mobility items
 <% end %>
 
-### Abilities
+## Abilities
 
 <%= ability :crystal_maiden_crystal_nova %> slows and damages enemies in a decent
 400 AoE. It deals less damage and has a higher cooldown than Frostbite, so unless you
@@ -87,7 +87,7 @@ have to surprise your opponents, blink in after they have already used their stu
 and hope they don't burst you down too quickly or saved one stun for you.
 
 
-### Items
+## Items
 
 As starting items, get a set of <%= item :tango %>, one or two <%= item :clarity %> potions
 and <%= item :ward_observer %> as well as <%= item :courier %>. If you have the gold for it,
@@ -123,7 +123,7 @@ because its range is much shorter. It is also worse at ganks and chasing.
 <%= item :bracer %> is a good early game item to get when you are behind and have survivability issues.
 You can choose to build it into <%= item :ancient_janggo %> later.
 
-### Gameplay
+## Gameplay
 
 #### Laning
 

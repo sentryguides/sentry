@@ -36,7 +36,7 @@ summary:
 Play safe until level 7 - Use Shukuchi to farm faster - Avoid getting focused in fights
 <% end %>
 
-### Overview
+## Overview
 
 Weaver is a agility carry that deals high damage and excels at chasing
 and tower diving without much risk. Thanks to <%= ability :weaver_shukuchi %>, he can solo the offlane
@@ -57,7 +57,7 @@ playing him in the safe lane guarantees he will be useful later on.
 
 
 
-### Abilities
+## Abilities
 
 <%= ability :weaver_shukuchi %> is the skill you will always want to max first:
 It grants you maximum movement speed, makes you invisible and deals damage to all
@@ -109,7 +109,7 @@ and since it also gives you back the mana you had 5 seconds ago, it effectively 
 zero mana (and at level 3, it actually costs none, unlike
 <%= ability :skeleton_king_reincarnation %> it is not countered mana break abilities).
 
-### Items
+## Items
 
 A good starting build for Weaver is <%= item :flask %>,
 <%= item :tango %>, <%= item :ring_of_protection %> and <%= item :circlet %>.
@@ -136,7 +136,7 @@ If you are suffering from heavy magic damage or disables, Black King Bar would b
 If you have general survivability issues, go for Heart of Tarrasque.
 In most games, you would go for either Daedalus or Black King Bar first.
 
-#### Alternatives
+### Alternatives
 
 <%= item :maelstrom %> can be built as your first big item to accelerate your
 farming speed. Unfortunately, Weaver does not benefit
@@ -152,7 +152,7 @@ your main carry will usually build it and you do not have to, unless multiple en
 possess evasion items. If you do decide to build it, you should do so in place of Desolator
 (usually against a Phantom Assasion) or Daedalus.
 
-### Gameplay
+## Gameplay
 
 #### Laning
 

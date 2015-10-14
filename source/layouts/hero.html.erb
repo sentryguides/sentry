@@ -1,34 +1,40 @@
 <% wrap_layout :layout do %>
   <div class="row">
     <div class="col-md-9">
-      <div class="row">
-        <div class="col-md-2"><img src="<%= img_src "heroes", current_page.data.hero %>" alt="<%= data.heroes[current_page.data.hero].dname  %>" class="img-responsive img-rounded"></div>
-        <div class="col-md-6">
-          <h4><%= data.heroes[current_page.data.hero].dname  %></h4>
-          <%= data.heroes[current_page.data.hero].droles  %>
+      <% panel do %>
+        <div class="panel-body panel-body-primary">
+          <div class="col-md-2">
+            <img src="<%= img_src "heroes", current_page.data.hero %>" alt="<%= data.heroes[current_page.data.hero].dname  %>" class="img-responsive img-rounded">
+          </div>
+          <div class="col-md-6">
+            <h4><%= data.heroes[current_page.data.hero].dname  %></h4>
+            <%= data.heroes[current_page.data.hero].droles  %>
+          </div>
+          <div class="col-md-4 text-right">
+            <% current_page.data.abilities.each do |a| %>
+              <%= ability a.id, icon: true, height: 42, width: :auto %>
+            <% end %>
+          </div>
         </div>
-        <div class="col-md-4 text-right">
-          <% current_page.data.abilities.each do |a| %>
-            <%= ability a.id, icon: true, height: 42, width: :auto %>
-          <% end %>
-
+        <% if content_for?(:summary) %>
+          <%= yield_content :summary %>
+        <% end %>
+        <div class="panel-body">
+          <div class="col-md-12">
+            <%= yield %>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <%= yield %>
+        <div class="row">
+          <div class="col-md-12">
+            <%= partial :discourse %>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <%= partial :discourse %>
-        </div>
-      </div>
+      <% end %>
     </div>
     <div class="col-md-3">
       <a class="btn btn-block btn-info" href="http://prose.io/#jgillich/sentry/edit/master/source/heroes/<%= current_page.data.hero %>.md">Edit</a>
       <a class="btn btn-block btn-info" href="https://github.com/jgillich/sentry/graphs/contributors">Contributors</a>
-
     </div>
+
   </div>
 <% end %>
