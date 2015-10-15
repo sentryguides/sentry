@@ -1,5 +1,5 @@
 language: ruby
-script: bundle exec middleman build
+script: bundle exec middleman build --verbose
 sudo: false
 after_success: |
   export PATH=$HOME/.local/bin:$PATH &&
