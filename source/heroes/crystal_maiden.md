@@ -106,11 +106,14 @@ boosting your overall survivability. No matter what you build first,
 you should eventually have both before moving on to the next item.
 
 Depending on the composition of the enemy team, you will want to get one of three items to help get the most from your ultimate.
-In most games, you will want <%= item :black_king_bar %> as your next item. It allows you to channel your ultimate without interruptions from stuns, silences, and other spell-based disables.
-If you were able to channel your ultimate without interruption so far or your opponents have abilties that go through Black King Bar (like <%= ability :vengefulspirit_nether_swap %>, <%= ability :pudge_meat_hook %> and a few others),
-you could also go straight into <%= item :ultimate_scepter %>. It buffs the damage
-and slow of your ultimate. These items however are very expensive for a support,
-in most games you will not be able to afford them.
+In most games, you will want <%= item :black_king_bar %> as your next item. It allows you to channel your ultimate without interruptions from stuns, silences and other spell-based disables.
+
+If you were able to channel your ultimate without interruption so far or your
+opponents have abilties that go through Black King Bar (like <%= ability :vengefulspirit_nether_swap %>,
+<%= ability :pudge_meat_hook %> and a few others), you could also go straight into
+<%= item :ultimate_scepter %>. It buffs the damage and slow of your ultimate.
+These items however are very expensive for a support, in most games you will not be able to afford them.
+
 If your problem is that you are dying too quickly to the enemy carry's auto attacks, consider investing in <%= item :ghost %>. Combining this with the <%= item :glimmer_cape %> makes it very difficult to stop you without a stun.
 
 #### Alternatives
