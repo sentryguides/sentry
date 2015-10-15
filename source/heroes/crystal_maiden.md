@@ -3,7 +3,7 @@ title: Crystal Maiden Guide
 hero: crystal_maiden
 layout: hero
 index: true
-abilities: 
+abilities:
   - id: crystal_maiden_crystal_nova
     hotkey: Q
   - id: crystal_maiden_frostbite
@@ -12,22 +12,22 @@ abilities:
     hotkey: E
   - id: crystal_maiden_freezing_field
     hotkey: R
-summary: 
-  items: 
-    start: 
+summary:
+  items:
+    start:
       - tango
       - clarity
       - ward_observer
       - courier
       - branches
       - branches
-    early: 
+    early:
       - tranquil_boots
       - magic_wand
-    mid: 
+    mid:
       - blink
       - glimmer_cape
-    late: 
+    late:
       - ultimate_scepter
       - black_king_bar
   abilities: W E Q E W R W E W E R Q Q Q U R
@@ -111,7 +111,7 @@ If you were able to channel your ultimate without interruption so far or your op
 you could also go straight into <%= item :ultimate_scepter %>. It buffs the damage
 and slow of your ultimate. These items however are very expensive for a support,
 in most games you will not be able to afford them.
-If your problem is that you are dying too quickly to the enemy carry's auto attacks, consider investing in <%= item :ghost_scepter %>. Combining this with the <%= item :glimmer_cape %> makes it very difficult to stop you without a stun.
+If your problem is that you are dying too quickly to the enemy carry's auto attacks, consider investing in <%= item :ghost %>. Combining this with the <%= item :glimmer_cape %> makes it very difficult to stop you without a stun.
 
 #### Alternatives
 
