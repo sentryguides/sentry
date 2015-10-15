@@ -22,11 +22,11 @@ module CustomHelpers
   end
 
   def item_link(id, item, content)
-    %Q(<a href="#" data-toggle="tooltip" data-html="true" data-placement="auto" title='#{item_tooltip(id, item)}'>#{content}</a>)
+    %Q(<a href="#" class="tooltip-link" data-toggle="tooltip" data-html="true" data-placement="auto" title='#{item_tooltip(id, item)}'>#{content}</a>)
   end
 
   def ability_link(id, ability, content)
-    %Q(<a href="#" data-toggle="tooltip" data-html="true" data-placement="auto" title='#{ability_tooltip(id, ability)}'>#{content}</a>)
+    %Q(<a href="#" class="tooltip-link" data-toggle="tooltip" data-html="true" data-placement="auto" title='#{ability_tooltip(id, ability)}'>#{content}</a>)
   end
 
   def item_icon(id, item, width, height)
