@@ -132,7 +132,7 @@ If you are suffering from heavy magic damage or disables, Black King Bar would b
 If you have general survivability issues, go for Heart of Tarrasque, but
 in most games, you would go for either Daedalus or Black King Bar first.
 
-### Alternatives
+#### Alternatives
 
 <%= item :maelstrom %> can be built as your first big item to accelerate your
 farming speed. Unfortunately, Weaver does not benefit from attack speed increases
@@ -176,7 +176,7 @@ When doing this, use Shukuchi to get into the Roshan pit, cast The Swarm on
 Roshan and if you are taking too much damage, simply cast Shukuchi again and wait
 until The Swarm comes off cooldown.
 
-#### Teamfights
+#### Teamfighting
 
 It is very important to realize Weaver is a squishy hero. If you tank most of your
 opponents big teamfighting abilities, you won't even live long enough to use

@@ -134,7 +134,7 @@ If your carry is able to free farm in lane, you can shift over to the jungle and
 the big creeps in the large camp with <%= ability :crystal_maiden_frostbite %> and
 stack them at the same time. If your lane is pushed out, you can also do pulls.
 
-#### Teamfights
+#### Teamfighting
 
 For most of the early and mid game, you do not have enough mana to cast all your
 spells during a fight. It is important to decide which spells to cast. If you expect
