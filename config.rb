@@ -12,6 +12,7 @@ activate :autoprefixer
 data.items.map do |index, item|
   proxy "/items/#{index}.html", "/items/template.html", :locals => { :item => item, :index => index }
 end
+ignore "/items/template.html"
 
 
 ###
