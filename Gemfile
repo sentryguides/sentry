@@ -6,8 +6,6 @@ gem "middleman", "~>3.4.0"
 
 gem "middleman-blog"
 
-gem 'middleman-lunr'
-
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 
@@ -17,7 +15,6 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 # Windows does not come with time zone data
 gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
-gem 'bh', '~> 1.3'
-
 gem "jquery-rails", :require => false
-gem "bootstrap-sass", :require => false
+
+gem 'middleman-autoprefixer'

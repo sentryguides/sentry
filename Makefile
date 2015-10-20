@@ -1,4 +1,12 @@
-all: data assets
+all: build
+
+deps: bower data assets
+
+build:
+	middleman build
+
+bower:
+	bower install
 
 data:
 	curl http://www.dota2.com/jsfeed/itemdata | ruby -ryaml -rjson -e 'puts YAML.dump(JSON.parse(STDIN.read)["itemdata"])' > data/items.yml

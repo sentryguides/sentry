@@ -1,0 +1,23 @@
+{
+  "name": "sentry",
+  "homepage": "https://github.com/jgillich/sentry",
+  "authors": [
+    "Jakob Gillich <jakob@gillich.me>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "tether": "git://github.com/HubSpot/tether.git#~1.1.1",
+    "bootstrap": "git://github.com/twbs/bootstrap.git#v4-dev"
+  }
+}
