@@ -4,7 +4,7 @@ layout: page
 ---
 
 Sentry is community driven, everyone can help improving it. Next to each guide,
-you will find a big blue <a href="http://prose.io/#jgillich/sentry/edit/master/source/contribute.md" class="btn btn-info btn-xs">Edit</a> button, all you need
+you will find a big blue <a href="http://prose.io/#jgillich/sentry/edit/master/source/contribute.md" class="btn btn-info btn-sm">Edit</a> button, all you need
 is a account on [GitHub](https://github.com). After you made your changes, you
 can save them to submit them for review.
 

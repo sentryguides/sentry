@@ -1,5 +1,4 @@
 ---
-title: Phantom Assassin Guide
 hero: phantom_assassin
 layout: hero
 index: true

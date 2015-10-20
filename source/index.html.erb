@@ -5,11 +5,10 @@ title: Sentry Guides
 
 <div class="row">
   <div class="col-md-12">
-    <% panel do %>
-      <div class='panel-body text-center'>
+    <div class="card">
+      <div class="card-block text-center">
         <h2>Uncover your hidden Dota skills</h2>
         <h4>Sentry provides high-quality guides that are constantly improved by the Community.</h4>
-
         <p>
           <% sitemap.where(:layout.equal => 'hero', :index.equal => true).order_by(:hero).limit(5).all.each do |page| %>
               <a href="<%=  page.url %>">
@@ -18,25 +17,15 @@ title: Sentry Guides
           <% end %>
         </p>
         <p><a class="btn btn-primary" href="/heroes/">View All</a></p>
-        <!-- Search does not work very well, hide for now
-        <form class="form-inline" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Hero">
-          </div>
-
-          <button type="submit" class="btn btn-primary">Search</button>
-          <div class="search-results">
-          </div>
-        </form>
-      -->
       </div>
-    <% end %>
+    </div>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-9">
-    <% panel heading: 'Latest Blog Posts' do %>
+    <div class="card">
+      <div class="card-header">Latest Blog Posts</div>
       <ul class="list-group">
         <% blog.articles[0...5].each do |article| %>
           <li class="list-group-item">
@@ -44,20 +33,19 @@ title: Sentry Guides
             <h3><a href="<%= article.url %>"><%= article.title %></a></h3>
             <%= article.body %>
           </li>
-
         <% end %>
       </ul>
-    <% end %>
+    </div>
   </div>
   <div class="col-md-3">
-    <% panel heading: 'Latest Forum Topics' do %>
+    <div class="card">
+      <div class="card-header">Latest Forum Topics</div>
       <ul class="list-group latest-posts"></ul>
-    <% end %>
+    </div>
   </div>
 </div>
-
-<script>
-$(function () {
+<% content_for :scripts do %>
+  <script>
   var json = 'https://forum.sentryguides.com/latest.json';
   var $el = $('.latest-posts');
   $.getJSON(json).done(function (latest) {
@@ -65,5 +53,5 @@ $(function () {
       $el.append('<li class="list-group-item"><a href="https://forum.sentryguides.com/t/' + topic.slug + '">' + topic.title + '</a></li>');
     });
   });
-});
-</script>
+  </script>
+<% end %>

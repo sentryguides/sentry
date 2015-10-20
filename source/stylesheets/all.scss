@@ -1,16 +1,42 @@
-@import "superhero/variables";
-
+@import 'variables';
 @import 'bootstrap';
-@import "superhero/bootswatch";
 
-.tooltip-inner {
-  max-width: 400px;
+.navbar {
+  margin-bottom: 15px;
 }
 
-.panel-body-primary {
-  background-color: $brand-primary;
-}
 
 .tooltip-link {
   white-space:nowrap
+}
+
+.card-hero {
+
+  .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 10px;
+    padding-bottom: 0;
+    top: auto;
+  }
+}
+
+.card {
+  .list-group-item {
+    border-left: none;
+    border-right: none;
+  }
+  .list-group-item:first-child {
+    border-top: none;
+  }
+  .list-group-item:last-child {
+    border-bottom: none;
+  }
+}
+
+.card-primary {
+  color: #FFF;
+}
+
+.heroes .card .list-group-item {
+  border: none;
 }

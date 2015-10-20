@@ -1,5 +1,4 @@
 ---
-title: Weaver Guide
 hero: weaver
 layout: hero
 index: true

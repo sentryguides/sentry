@@ -7,7 +7,7 @@ module CustomHelpers
 
   def item_tooltip(id, item)
     %Q(
-      <img src="#{img_src("items", id)}" width="42.24" height="32" class="img-rounded"> #{item["dname"]}
+      <img src="#{img_src("items", id)}" width="42.24" height="32"> #{item["dname"]}
       #{if item["desc"].empty? then "" else "<br>" + item["desc"] end}
       #{if item["attrib"].empty? then "" else "<br>" + item["attrib"] end}
     ).gsub("'", "&#39;").gsub("\r", "").gsub("\n", "")
@@ -15,26 +15,26 @@ module CustomHelpers
 
   def ability_tooltip(id, ability)
     %Q(
-      <img src="#{img_src("abilities", id)}" width="32" height="32" class="img-rounded"> #{ability["dname"]}</b>
+      <img src="#{img_src("abilities", id)}" width="32" height="32"> #{ability["dname"]}</b>
       <br>#{ability["desc"]}
       <br>#{ability["dmg"]}#{if ability["attrib"].empty? then "" else ability["attrib"] + "<br>" end}#{ability["cmb"]}
     ).gsub("'", "&#39;").gsub("\r\n", "<br>")
   end
 
   def item_link(id, item, content)
-    %Q(<a href="#" class="tooltip-link" data-toggle="tooltip" data-html="true" data-placement="auto" title='#{item_tooltip(id, item)}'>#{content}</a>)
+    %Q(<a class="tooltip-link" href="/items/#{id}.html" data-toggle="tooltip" data-html="true" data-placement="bottom" title='#{item_tooltip(id, item)}'>#{content}</a>)
   end
 
   def ability_link(id, ability, content)
-    %Q(<a href="#" class="tooltip-link" data-toggle="tooltip" data-html="true" data-placement="auto" title='#{ability_tooltip(id, ability)}'>#{content}</a>)
+    %Q(<a href="#" class="tooltip-link" data-toggle="tooltip" data-html="true" data-placement="bottom" title='#{ability_tooltip(id, ability)}'>#{content}</a>)
   end
 
   def item_icon(id, item, width, height)
-    item_link(id, item, %Q(<img src="#{img_src("items", id)}" width="#{width}" height="#{height}" class="img-rounded" style="object-fit: cover">))
+    item_link(id, item, %Q(<img src="#{img_src("items", id)}" width="#{width}" height="#{height}" style="object-fit: cover">))
   end
 
   def ability_icon(id, ability, width, height)
-    ability_link(id, ability, %Q(<img src="#{img_src("abilities", id)}" width="#{width}" height="#{height}" class="img-rounded">))
+    ability_link(id, ability, %Q(<img src="#{img_src("abilities", id)}" width="#{width}" height="#{height}">))
   end
 
   def ability(id, options = {})
@@ -44,7 +44,7 @@ module CustomHelpers
       options[:height] = options[:width] if options[:height] == :auto
       ability_icon(id, a, options[:width] || 32, options[:height] || 32)
     else
-      ability_link(id, a, %Q(<img src="#{img_src("abilities", id)}" height="16" class="img-rounded"> #{a["dname"]}))
+      ability_link(id, a, %Q(<img src="#{img_src("abilities", id)}" height="16"> #{a["dname"]}))
     end
   end
 
@@ -55,7 +55,7 @@ module CustomHelpers
       options[:height] = options[:width] / 1.32 if options[:height] == :auto
       item_icon(id, i, options[:width] || 32 * 1.32, options[:height] || 32)
     else
-      item_link(id, i, %Q(<img src="#{img_src("items", id)}" height="16" class="img-rounded"> #{i["dname"]}))
+      item_link(id, i, %Q(<img src="#{img_src("items", id)}" height="16"> #{i["dname"]}))
     end
   end
 

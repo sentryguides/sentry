@@ -1,12 +1,15 @@
 <div class="row">
   <div class="col-md-9">
-    <% panel do %>
-      <div class="panel-body">
-        <% sitemap.where(:layout.equal => 'hero', :index.equal => true).order_by(:hero).all().each do |page| %>
-          <a href="<%=  page.url %>">
-            <img src="<%= img_src "heroes", page.data.hero %>" alt="<%= page.data.hero %>" width="100">
-          </a>
-        <% end %>
+    <% sitemap.where(:layout.equal => 'hero', :index.equal => true).order_by(:hero).all().each do |page| %>
+      <div class="col-md-3 col-xs-6">
+        <a href="<%=  page.url %>">
+          <div class="card card-inverse card-hero">
+            <img class="card-img-top img-fluid" src="<%= img_src "heroes", page.data.hero %>" alt="<%= page.data.hero %>">
+            <div class="card-img-overlay text-center">
+              <h6 class="card-title"><%= data.heroes[page.data.hero].dname  %></h6>
+            </div>
+          </div>
+        </a>
       </div>
     <% end %>
   </div>

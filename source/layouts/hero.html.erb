@@ -1,25 +1,29 @@
+<% current_page.add_metadata :page => { :title => data.heroes[current_page.data.hero].dname }  %>
+
 <% wrap_layout :layout do %>
   <div class="row">
     <div class="col-md-9">
-      <% panel do %>
-        <div class="panel-body panel-body-primary">
-          <div class="col-md-2">
-            <img src="<%= img_src "heroes", current_page.data.hero %>" alt="<%= data.heroes[current_page.data.hero].dname  %>" class="img-responsive img-rounded">
-          </div>
-          <div class="col-md-6">
-            <h4><%= data.heroes[current_page.data.hero].dname  %></h4>
-            <%= data.heroes[current_page.data.hero].droles  %>
-          </div>
-          <div class="col-md-4 text-right">
-            <% current_page.data.abilities.each do |a| %>
-              <%= ability a.id, icon: true, height: 42, width: :auto %>
-            <% end %>
+      <div class="card">
+        <div class="card-block card-primary text-inverted">
+          <div class="row">
+            <div class="col-md-2">
+              <img src="<%= img_src "heroes", current_page.data.hero %>" alt="<%= data.heroes[current_page.data.hero].dname  %>" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+              <h4><%= data.heroes[current_page.data.hero].dname  %></h4>
+              <%= data.heroes[current_page.data.hero].droles  %>
+            </div>
+            <div class="col-md-4 text-right">
+              <% current_page.data.abilities.each do |a| %>
+                <%= ability a.id, icon: true, height: 42, width: :auto %>
+              <% end %>
+            </div>
           </div>
         </div>
         <% if content_for?(:summary) %>
           <%= yield_content :summary %>
         <% end %>
-        <div class="panel-body">
+        <div class="card-block">
           <div class="col-md-12">
             <%= yield %>
           </div>
@@ -29,12 +33,12 @@
             <%= partial :discourse %>
           </div>
         </div>
-      <% end %>
+      </div>
     </div>
     <div class="col-md-3">
-      <a class="btn btn-block btn-info" href="http://prose.io/#jgillich/sentry/edit/master/source/heroes/<%= current_page.data.hero %>.md">Edit</a>
-      <a class="btn btn-block btn-info" href="https://github.com/jgillich/sentry/graphs/contributors">Contributors</a>
-      <a class="btn btn-block btn-info" href="https://www.dotabuff.com/heroes/<%= data.heroes[current_page.data.hero].dname.downcase.gsub ' ', '-' %>">Dotabuff</a>
+      <a class="btn btn-block btn-secondary" href="http://prose.io/#jgillich/sentry/edit/master/source/heroes/<%= current_page.data.hero %>.md">Edit</a>
+      <a class="btn btn-block btn-secondary" href="https://github.com/jgillich/sentry/graphs/contributors">Contributors</a>
+      <a class="btn btn-block btn-secondary" href="https://www.dotabuff.com/heroes/<%= data.heroes[current_page.data.hero].dname.downcase.gsub ' ', '-' %>">Dotabuff</a>
     </div>
 
   </div>

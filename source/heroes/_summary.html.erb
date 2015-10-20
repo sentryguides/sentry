@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-12">
       <ul class="list-group">
-        <li class="list-group-item list-group-item-success text-center">
+        <li class="list-group-item list-group-item-info text-center">
           <% current_page.data.summary.items.each do |name, items| %>
             <span style="padding-left: 25px; padding-right: 25px;">
               <% items.each do |item| %>
@@ -11,7 +11,7 @@
             </span>
           <% end %>
         </li>
-        <li class="list-group-item list-group-item-success text-center">
+        <li class="list-group-item list-group-item-info text-center">
           <% current_page.data.summary.abilities.gsub(/\s+/, "").split("").each_with_index do |hotkey, index| %>
             <% if hotkey != "U" %>
               <%= ability current_page.data.abilities.find {|a| a.hotkey == hotkey }.id, icon: true, height: 42, width: :auto %>
@@ -20,8 +20,8 @@
             <% end %>
           <% end %>
         </li>
-        <li class="list-group-item list-group-item-success text-center">
-          <%= markdown yield %>
+        <li class="list-group-item list-group-item-info text-center">
+          <%= yield %>
         </li>
       </ul>
     </div>

@@ -1,13 +1,13 @@
 <% wrap_layout :layout do %>
   <div class="row">
     <div class="col-md-9">
-      <% panel do %>
-        <div class="panel-body">
+      <div class="card">
+        <div class="card-block">
           <time><%= current_page.date.strftime('%b %e %Y') %></time>
           <h1><%= current_page.title %></h1>
           <%= yield %>
         </div>
-      <% end %>
+      </div>
     </div>
     <div class="col-md-3">
     </div>

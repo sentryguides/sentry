@@ -1,5 +1,4 @@
 ---
-title: Crystal Maiden Guide
 hero: crystal_maiden
 layout: hero
 index: true
