@@ -1,0 +1,14 @@
+<h4><img src="/images/dota/abilities/<%= id %>.png" width="64"> <%= ability.dname %></h4>
+<% if ! ability.desc.empty? %>
+  <div class=""><%= ability.desc %></div>
+<% end %>
+<% if ! ability.notes.empty? %>
+  <div class="text-info"><%= ability.notes %></div>
+<% end %>
+<% if ! ability.attrib.empty? %>
+  <div class=""><%= ability.attrib %></div>
+<% end %>
+<% if ! ability.cmb.empty? %>
+  <div class=""><%= ability.cmb.gsub("http://cdn.dota2.com/apps/dota2/images/tooltips/", "/images/tooltips/") %></div>
+<% end %>
+<div class="text-muted"><%= ability.lore %></div>

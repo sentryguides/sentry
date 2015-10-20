@@ -6,17 +6,7 @@ index: true
 <div class="row">
   <div class="col-md-9">
     <div class="card card-block">
-      <h4><img src="/images/dota/abilities/<%= index %>.png" width="64"> <%= ability.dname %></h4>
-      <% if ! ability.desc.empty? %>
-        <div class=""><%= ability.desc %></div>
-      <% end %>
-      <% if ! ability.notes.empty? %>
-        <div class="text-info"><%= ability.notes %></div>
-      <% end %>
-      <% if ! ability.attrib.empty? %>
-        <div class=""><%= ability.attrib %></div>
-      <% end %>
-      <div class="text-muted"><%= ability.lore %></div>
+      <%= partial :ability, :locals => { :ability => ability, id: id } %>
     </div>
   </div>
 </div>

@@ -6,18 +6,7 @@ index: true
 <div class="row">
   <div class="col-md-9">
     <div class="card card-block">
-      <h4><img src="/images/dota/items/<%= index %>.png" width="64"> <%= item.dname %></h4>
-      <div class="text-warning"><img src="/images/dota/abilities/alchemist_goblins_greed.png" width="16"> <%= item.cost %></div>
-      <% if ! item.desc.empty? %>
-        <div class=""><%= item.desc %></div>
-      <% end %>
-      <% if ! item.notes.empty? %>
-        <div class="text-info"><%= item.notes %></div>
-      <% end %>
-      <% if ! item.attrib.empty? %>
-        <div class=""><%= item.attrib %></div>
-      <% end %>
-      <div class="text-muted"><%= item.lore %></div>
+      <%= partial :item, :locals => { :item => item, id: id } %>
     </div>
   </div>
 </div>

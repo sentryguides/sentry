@@ -10,6 +10,8 @@
 
     <%= stylesheet_link_tag "all" %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.css">
+
   </head>
 
   <body class="<%= page_classes %>">
@@ -44,6 +46,7 @@
       </div>
     </div>
     <%= javascript_include_tag  "all" %>
+    <script src="https://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.js"></script>
     <% if content_for?(:scripts) %>
       <%= yield_content :scripts %>
     <% end %>

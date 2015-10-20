@@ -1,5 +1,9 @@
 require "lib/rendering_hack"
 
+###
+# Extensions
+###
+
 activate :blog do |blog|
   blog.prefix = "blog"
   blog.layout = "blog"
@@ -7,24 +11,23 @@ end
 
 activate :autoprefixer
 
-data.items.map do |index, item|
-  proxy "/items/#{index}.html", "/items/template.html", :locals => { :item => item, :index => index }
+###
+# Dynamic Pages
+###
+
+data.items.map do |id, item|
+  proxy "/items/#{id}.html", "/items/template.html", :locals => { :item => item, :id => id }
+  proxy "/items/_#{id}.html", "/items/template_raw.html", :locals => { :item => item, :id => id }
 end
 ignore "/items/template.html"
+ignore "/items/template_raw.html"
 
-data.abilities.map do |index, ability|
-  proxy "/abilities/#{index}.html", "/abilities/template.html", :locals => { :ability => ability, :index => index }
+data.abilities.map do |id, ability|
+  proxy "/abilities/#{id}.html", "/abilities/template.html", :locals => { :ability => ability, :id => id }
+  proxy "/abilities/_#{id}.html", "/abilities/template_raw.html", :locals => { :ability => ability, :id => id }
 end
 ignore "/abilities/template.html"
-
-###
-# Compass
-###
-
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+ignore "/abilities/template_raw.html"
 
 ###
 # Helpers
@@ -42,15 +45,7 @@ helpers do
   def ability(id, options = {})
     a = data[:abilities][id]
     img = "/images/dota/abilities/#{id}.png"
-
-    tooltip = %Q(
-      <img src="#{img}" width="32" height="32"> #{a["dname"]}</b>
-      <br>#{a["desc"]}
-      <br>#{a["dmg"]}#{if a["attrib"].empty? then "" else a["attrib"] + "<br>" end}#{a["cmb"]}
-    ).gsub("'", "&#39;").gsub("\r", "").gsub("\n", "")
-
-    html = %Q(<a href="/abilities/#{id}.html" class="tooltip-link" data-toggle="tooltip" data-html="true" data-placement="bottom" title='#{tooltip}'>)
-
+    html = %Q(<a href="/abilities/#{id}.html" class="tooltip-link" data-url="/abilities/_#{id}.html">)
     if options[:icon]
       options[:width] = options[:height] if options[:width] == :auto
       options[:height] = options[:width] if options[:height] == :auto
@@ -66,15 +61,7 @@ helpers do
   def item(id, options = {})
     i = data[:items][id]
     img = "/images/dota/items/#{id}.png"
-
-    tooltip = %Q(
-      <img src="#{img}" width="42.24" height="32"> #{i["dname"]}
-      #{if i["desc"].empty? then "" else "<br>" + i["desc"] end}
-      #{if i["attrib"].empty? then "" else "<br>" + i["attrib"] end}
-    ).gsub("'", "&#39;").gsub("\r", "").gsub("\n", "")
-
-    html = %Q(<a href="/items/#{id}.html" class="tooltip-link" data-toggle="tooltip" data-html="true" data-placement="bottom" title='#{tooltip}'>)
-
+    html = %Q(<a href="/items/#{id}.html" class="tooltip-link" data-url="/items/_#{id}.html">)
     if options[:icon]
       options[:width] = options[:height] * 1.32 if options[:width] == :auto
       options[:height] = options[:width] / 1.32 if options[:height] == :auto
@@ -86,9 +73,8 @@ helpers do
     end
     html + "</a>"
   end
-
-
 end
+
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
