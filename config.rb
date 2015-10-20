@@ -28,8 +28,61 @@ ignore "/items/template.html"
 # Helpers
 ###
 
-helpers CustomHelpers
+helpers do
+  def separator
+    "<!--SENTRY_CONTENT_SEPARATOR-->"
+  end
 
+  def ability(id, options = {})
+    a = data[:abilities][id]
+    img = app.image_url "/images/dota/abilities/#{id}.png"
+
+    tooltip = %Q(
+      <img src="#{img}" width="32" height="32"> #{a["dname"]}</b>
+      <br>#{a["desc"]}
+      <br>#{a["dmg"]}#{if a["attrib"].empty? then "" else ability["attrib"] + "<br>" end}#{a["cmb"]}
+    )
+    html = %Q(
+      <a href="/abilities/#{id}.html" class="tooltip-link" data-toggle="tooltip" data-html="true" data-placement="bottom" title='#{tooltip}'>
+    )
+    if options[:icon]
+      options[:width] = options[:height] if options[:width] == :auto
+      options[:height] = options[:width] if options[:height] == :auto
+      html += %Q(
+        <img src="#{img}" width="#{options[:width] || 32}" height="#{options[:height] || 32}">
+      )
+    else
+      html += %Q(<img src="#{img}" height="16"> #{a["dname"]})
+    end
+    html + "</a>"
+  end
+
+  def item(id, options = {})
+    i = data[:items][id]
+    img = app.image_url "/images/dota/items/#{id}.png"
+
+    tooltip = %Q(
+    <img src="#{img}" width="42.24" height="32"> #{i["dname"]}
+    #{if i["desc"].empty? then "" else "<br>" + i["desc"] end}
+    #{if i["attrib"].empty? then "" else "<br>" + i["attrib"] end}
+    )
+    html = %Q(
+      <a href="/items/#{id}.html" class="tooltip-link" data-toggle="tooltip" data-html="true" data-placement="bottom" title='#{tooltip}'>
+    )
+    if options[:icon]
+      options[:width] = options[:height] if options[:width] == :auto
+      options[:height] = options[:width] if options[:height] == :auto
+      html += %Q(
+        <img src="#{img}" width="#{options[:width] || 32}" height="#{options[:height] || 32}">
+      )
+    else
+      html += %Q(<img src="#{img}" height="16"> #{a["dname"]})
+    end
+    html + "</a>"
+  end
+
+
+end
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
@@ -37,8 +90,6 @@ helpers CustomHelpers
  configure :development do
    activate :livereload
  end
-
-
 
 
 set :css_dir, 'stylesheets'
