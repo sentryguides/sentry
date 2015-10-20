@@ -12,6 +12,10 @@ data.items.map do |index, item|
 end
 ignore "/items/template.html"
 
+data.abilities.map do |index, ability|
+  proxy "/abilities/#{index}.html", "/abilities/template.html", :locals => { :ability => ability, :index => index }
+end
+ignore "/abilities/template.html"
 
 ###
 # Compass
