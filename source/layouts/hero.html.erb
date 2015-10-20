@@ -7,7 +7,7 @@
         <div class="card-block card-primary text-inverted">
           <div class="row">
             <div class="col-md-2">
-              <img src="<%= img_src "heroes", current_page.data.hero %>" alt="<%= data.heroes[current_page.data.hero].dname  %>" class="img-fluid">
+              <img src="<%= "/images/heroes/#{current_page.data.hero}.png" %>" alt="<%= data.heroes[current_page.data.hero].dname  %>" class="img-fluid">
             </div>
             <div class="col-md-6">
               <h4><%= data.heroes[current_page.data.hero].dname  %></h4>

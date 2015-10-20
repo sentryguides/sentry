@@ -12,7 +12,7 @@ title: Sentry Guides
         <p>
           <% sitemap.where(:layout.equal => 'hero', :index.equal => true).order_by(:hero).limit(5).all.each do |page| %>
               <a href="<%=  page.url %>">
-                <img src="<%= img_src "heroes", page.data.hero %>" alt="<%= page.data.hero %>" width="100">
+                <img src="<%= "/images/heroes/#{page.data.hero}.png" %>" alt="<%= page.data.hero %>" width="100">
               </a>
           <% end %>
         </p>
