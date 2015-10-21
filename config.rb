@@ -1,6 +1,18 @@
 require "lib/rendering_hack"
 
 ###
+# Config
+###
+
+set :css_dir, 'stylesheets'
+
+set :js_dir, 'javascripts'
+
+set :images_dir, 'images'
+
+sprockets.append_path File.join root, 'bower_components'
+
+###
 # Extensions
 ###
 
@@ -75,24 +87,14 @@ helpers do
   end
 end
 
-# Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
+###
+# Targets
+###
 
-# Reload the browser automatically whenever files change
  configure :development do
    activate :livereload
  end
 
-
-set :css_dir, 'stylesheets'
-
-set :js_dir, 'javascripts'
-
-set :images_dir, 'images'
-
-sprockets.append_path File.join root, 'bower_components'
-
-# Build-specific configuration
 configure :build do
 
   activate :minify_css

@@ -14,6 +14,7 @@ task :data do
     items.map { |k, v| "http://cdn.dota2.com/apps/dota2/images/items/#{k}_lg.png" }.each do |url|
       filename = 'source/images/dota/items/' + File.basename(URI.parse(url).path).sub("_lg", "")
       IO.copy_stream(open(url), filename)
+      system 'pngquant --ext=.png --force --skip-if-larger ' + filename
       puts "wrote file #{filename}"
     end
   end
@@ -25,6 +26,7 @@ task :data do
     heroes.map { |k, v| "http://cdn.dota2.com/apps/dota2/images/heroes/#{k}_lg.png" }.each do |url|
       filename = 'source/images/dota/heroes/' + File.basename(URI.parse(url).path).sub("_lg", "")
       IO.copy_stream(open(url), filename)
+      system 'pngquant --ext=.png --force --skip-if-larger ' + filename
       puts "wrote file #{filename}"
     end
   end
@@ -36,6 +38,7 @@ task :data do
     abilities.map { |k, v| "http://cdn.dota2.com/apps/dota2/images/abilities/#{k}_lg.png" }.each do |url|
       filename = 'source/images/dota/abilities/' + File.basename(URI.parse(url).path).sub("_lg", "")
       IO.copy_stream(open(url), filename)
+      system 'pngquant --ext=.png --force --skip-if-larger ' + filename
       puts "wrote file #{filename}"
     end
   end
