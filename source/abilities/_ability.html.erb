@@ -2,6 +2,9 @@
 <% if ! ability.desc.empty? %>
   <div class=""><%= ability.desc %></div>
 <% end %>
+<% if ! ability.dmg.empty? %>
+  <div class=""><%= ability.dmg %></div>
+<% end %>
 <% if ! ability.notes.empty? %>
   <div class="text-info"><%= ability.notes %></div>
 <% end %>
