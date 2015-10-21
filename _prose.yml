@@ -7,9 +7,7 @@ prose:
     - layouts
     - stylesheets
     - CNAME
-    - search.json.erb
-    - heroes/_*
-    - _*
+    - .nojekyll
   metadata:
     heroes:
       - name: "layout"
