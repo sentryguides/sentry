@@ -14,6 +14,8 @@ set :trailing_slash, false
 
 sprockets.append_path File.join root, 'bower_components'
 
+page "/404.html", :directory_index => false
+
 ###
 # Extensions
 ###
