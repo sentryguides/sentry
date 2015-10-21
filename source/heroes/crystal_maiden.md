@@ -34,7 +34,7 @@ published: true
 ---
 
 
-<% partial :summary do %>
+<% partial 'heroes/summary' do %>
 Use Frostbite to jungle - Wait for the right moment to use your ultimate
 <% end %>
 
@@ -44,7 +44,7 @@ Crystal Maiden is a flexible support hero that provides team-wide mana
 regeneration, a disable on a short cooldown and a high-damage, although
 hard to use, ultimate.
 
-<% partial :pros_cons do %>
+<% partial 'heroes/pros_cons' do %>
 * Good disable and nukes
 * Team-wide mana regeneration can have a big impact on the outcome of fights
 * If used correctly, one of the highest damage dealing ultimates in the game

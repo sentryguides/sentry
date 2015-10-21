@@ -33,7 +33,7 @@ summary:
 ---
 
 
-<% partial :summary do %>
+<% partial 'heroes/summary' do %>
 Use Dagger to last hit - Activate BKB before jumping into fights
 <% end %>
 
@@ -42,7 +42,7 @@ Use Dagger to last hit - Activate BKB before jumping into fights
 Phantom Assassin is a carry that can contribute to fights early on and still scale
 very well into th late game.
 
-<% partial :pros_cons do %>
+<% partial 'heroes/pros_cons' do %>
 * Contributes to early fights
 * Great chaser
 * Can safely last hit with dagger

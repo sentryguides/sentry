@@ -31,7 +31,7 @@ summary:
   abilities: W E W E Q R W Q W Q R Q E E U R
 ---
 
-<% partial :summary do %>
+<% partial 'heroes/summary' do %>
 Spam Ion Shell on your creeps for last hits and harass - Use Vacuum together with your ultimate
 <% end %>
 
@@ -42,7 +42,7 @@ can force melee carries out of the lane by harassing them,
 all while getting good farm for himself with Ion Shell. His ultimate has very
 high damage potential and scales well into the late game.
 
-<% partial :pros_cons do %>
+<% partial 'heroes/pros_cons' do %>
 * Can solo the offlane
 * Makes last hitting very difficult for melee lane opponents
 * High base armor

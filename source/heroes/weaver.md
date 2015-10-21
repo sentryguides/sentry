@@ -31,7 +31,7 @@ summary:
   abilities: W E W E W R W Q E Q R E Q Q U R
 ---
 
-<% partial :summary do %>
+<% partial 'heroes/summary' do %>
 Play safe until level 7 - Use Shukuchi to farm faster - Avoid getting focused in fights
 <% end %>
 
@@ -42,7 +42,7 @@ and tower diving. Thanks to <%= ability :weaver_shukuchi %>, he can solo the off
 and still grab decent farm in most cases. However, being somewhat item-dependent,
 playing him in the safe lane guarantees he will be useful later on.
 
-<% partial :pros_cons do %>
+<% partial 'heroes/pros_cons' do %>
 * Requires a lot of lockdown to kill
 * Deals high damage
 * Can solo the offlane
