@@ -35,23 +35,29 @@ activate :directory_indexes
 
 data.items.map do |id, item|
   proxy "/items/#{id}.html", "/items/template.html", :locals => { :item => item, :id => id }
-  proxy "/items/_#{id}.html", "/items/template_raw.html", :locals => { :item => item, :id => id }
+  proxy "/items/_#{id}.html", "/items/template_tooltip.html", :locals => { :item => item, :id => id }
 end
 ignore "/items/template.html"
-ignore "/items/template_raw.html"
+ignore "/items/template_tooltip.html"
 
 data.abilities.map do |id, ability|
   proxy "/abilities/#{id}.html", "/abilities/template.html", :locals => { :ability => ability, :id => id }
-  proxy "/abilities/_#{id}.html", "/abilities/template_raw.html", :locals => { :ability => ability, :id => id }
+  proxy "/abilities/_#{id}.html", "/abilities/template_tooltip.html", :locals => { :ability => ability, :id => id }
 end
 ignore "/abilities/template.html"
-ignore "/abilities/template_raw.html"
+ignore "/abilities/template_tooltip.html"
 
 ###
 # Helpers
 ###
 
 helpers do
+
+  def youtube(id)
+    %Q(<iframe width="783" height="440" src="https://www.youtube.com/embed/#{id}?rel=0" frameborder="0" allowfullscreen></iframe>)
+  end
+
+
   def separator
     "<!--SENTRY_CONTENT_SEPARATOR-->"
   end
