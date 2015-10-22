@@ -10,8 +10,6 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
-set :trailing_slash, false
-
 sprockets.append_path File.join root, 'bower_components'
 
 page "/404.html", :directory_index => false
@@ -104,7 +102,9 @@ end
 ###
 
  configure :development do
+
    activate :livereload
+
  end
 
 configure :build do
