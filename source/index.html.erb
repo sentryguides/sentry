@@ -12,7 +12,7 @@ title: Sentry Guides
         <p>
           <% sitemap.where(:layout.equal => 'hero', :index.equal => true).order_by(:hero).limit(5).all.each do |page| %>
               <a href="<%=  page.url %>">
-                <img src="<%= "/images/dota/heroes/#{page.data.hero}.png" %>" alt="<%= page.data.hero %>" width="100">
+                <img src="<%= "/images/dota/heroes/#{page.data.hero}.png" %>" alt="<%= data.heroes[page.data.hero].dname %>" title="<%= data.heroes[page.data.hero].dname %>" width="100">
               </a>
           <% end %>
         </p>
@@ -23,6 +23,7 @@ title: Sentry Guides
 </div>
 
 <div class="row">
+
   <div class="col-md-9">
     <div class="card">
       <div class="card-header">Latest Blog Posts</div>
@@ -37,13 +38,27 @@ title: Sentry Guides
       </ul>
     </div>
   </div>
+
+  <div class="col-md-3">
+    <div class="card">
+      <div class="card-header">Sentry Links</div>
+      <div class="card-block text-center">
+        <a href="https://forum.sentryguides.com/" title="Forum"><i class="fa fa-comment fa-2x"></i></a>
+        <a href="https://www.youtube.com/channel/UCm6uFNjw0vR0tDWs-imMFKg" title="Youtube Channel"><i class="fa fa-youtube fa-2x"></i></a>
+        <a href="https://github.com/jgillich/sentry" title="GitHub Repository"><i class="fa fa-github fa-2x"></i></a>
+      </div>
+    </div>
+  </div>
+
   <div class="col-md-3">
     <div class="card">
       <div class="card-header">Latest Forum Topics</div>
       <ul class="list-group latest-posts"></ul>
     </div>
   </div>
+
 </div>
+
 <% content_for :scripts do %>
   <script>
   var json = 'https://forum.sentryguides.com/latest.json';
