@@ -1,5 +1,4 @@
 ---
-title: Dark Seer Guide
 hero: dark_seer
 layout: hero
 index: true
