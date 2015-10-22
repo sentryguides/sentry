@@ -21,7 +21,7 @@
         <ul class="nav navbar-nav">
           <li class="nav-item <% if current_page.url == "/heroes" %>active<% end %>"><a class="nav-link" href="/heroes">Heroes</a></li>
           <li class="nav-item <% if current_page.url == "/items" %>active<% end %>"><a class="nav-link" href="/items">Items</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Coming soon">Mechanics</a></li>
+          <li class="nav-item <% if current_page.url == "/mechanics" %>active<% end %>"><a class="nav-link" href="/mechanics">Mechanics</a></li>
         </ul>
         <ul class="nav navbar-nav pull-right">
           <li class="nav-item"><a class="nav-link" href="https://forum.sentryguides.com">Forum</a></li>
