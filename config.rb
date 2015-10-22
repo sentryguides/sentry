@@ -69,7 +69,7 @@ helpers do
   def ability(id, options = {})
     a = data[:abilities][id]
     img = "/images/dota/abilities/#{id}.png"
-    html = %Q(<a href="/abilities/#{id}" class="tooltip-link" data-url="/abilities/_#{id}">)
+    html = %Q(<a href="/abilities/#{id}" class="tooltip-link" data-url="/abilities/_#{id}/">)
     if options[:icon]
       options[:width] = options[:height] if options[:width] == :auto
       options[:height] = options[:width] if options[:height] == :auto
@@ -85,7 +85,7 @@ helpers do
   def item(id, options = {})
     i = data[:items][id]
     img = "/images/dota/items/#{id}.png"
-    html = %Q(<a href="/items/#{id}" class="tooltip-link" data-url="/items/_#{id}">)
+    html = %Q(<a href="/items/#{id}" class="tooltip-link" data-url="/items/_#{id}/">)
     if options[:icon]
       options[:width] = options[:height] * 1.32 if options[:width] == :auto
       options[:height] = options[:width] / 1.32 if options[:height] == :auto
