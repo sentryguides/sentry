@@ -3,6 +3,10 @@
 
 .navbar {
   margin-bottom: 15px;
+  line-height: normal;
+  .navbar-brand {
+    font-weight: bold;
+  }
 }
 
 
