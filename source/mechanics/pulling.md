@@ -8,9 +8,9 @@ supports to get some gold and experience for themselves, without taking anything
 away from their carry. Additionally, it denies gold and experience that your
 opponents could otherwise have gotten.
 
-As an introduction, here is a short video that shows how to pull on the Radiant side:
+As an introduction, here is a short video that shows how to pull:
 
-<%= youtube 'a1bkJZ_JAq0' %>
+<%= youtube 'TXbEForGuwo' %>
 
 ## When to pull
 
@@ -28,8 +28,8 @@ up with the next creep wave and push the lane - which is the opposite of what
 you want. The problem is that a single small camp is not enough to kill an entire
 creep wave. Therefore, there are two options when it comes to executing a successful pull:
 
-1. **Connecting two or more camps**: Pull more camps until all your creeps are dead
-2. **Stacking a camp**: A stacked camp is able to kill a creep wave easily
+1. **Double pull**: Pull more camps until all your creeps are dead
+2. **Stacking**: A stacked camp is able to kill a creep wave easily
 
 #### Radiant
 
@@ -47,3 +47,7 @@ On the Dire side, connecting a pull is somewhat difficult, stacking is recommend
 
 **The correct timing to pull the small camp on the Dire side is 15 seconds
 after a creep wave spawned, or at 15 and 45 seconds.**
+
+Note: these timings are just estimates and depend on whether you are a ranged hero,
+your movement speed and on the type of creeps in a camp. Just hop into a private
+lobby and start practicing!
