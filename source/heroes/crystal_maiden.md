@@ -29,7 +29,7 @@ summary:
     late:
       - ultimate_scepter
       - black_king_bar
-  abilities: W E Q E W R W E W E R Q Q Q U R
+  abilities: W E Q E Q R Q E Q E W W W R U R
 published: true
 ---
 
@@ -56,21 +56,23 @@ hard to use, ultimate.
 ## Abilities
 
 <%= ability :crystal_maiden_crystal_nova %> slows and damages enemies in a
-400 AoE. It deals less damage and has a higher cooldown than Frostbite, so unless you
-plan to be involved in early team fights where the AoE would be useful, this ability should be maxed last.
+400 AoE. It deals less damage and has a higher cooldown than Frostbite, but the
+movement and attack slow improve drastically as you level it up. It is not a
+very good ability at level one, which is why you want to level it up as early as
+possible.
 
 <%= ability :crystal_maiden_frostbite %> freezes a unit in place, making them unable to move
 or attack, and deals up to 300 damage to heroes. They can still cast abilities or items
 like teleport scrolls. During the duration of Frostbite, you also get True Sight
 of the unit, so heroes like Riki can not turn invisible.
 
-Frostbite is your early ganking ability, you usually want it to be around the same level as
-Arcane Aura, otherwise you will run out of mana pretty quickly. Frostbite can also be used
-for jungling: Even on level 1, it always lasts 10 seconds on creeps and deals a total of
-1000 damage. This allows you to kill the big jungle creeps easily.
+Frostbite can also be used for jungling: Even on level 1, it always lasts 10
+seconds on creeps and deals a total of 1000 damage. This allows you to kill the
+big jungle creeps easily. Frostbite is a great ability at level one, and since
+Crystal Nova only gets good at higher levels, it is best to max Frostbite last.
 
 <%= ability :crystal_maiden_brilliance_aura %> is a global aura that grants additional
-mana regeneration to your team. It allows everyone to cast more spells, which can sometimes
+mana regeneration to your team. It allows your team to cast more spells, which can sometimes
 make the difference between winning and loosing a fight. Especially Heroes that often
 have mana issues, but don't want to build any regen items, like Slark or Bristleback, will
 be very happy to have Crystal Maiden in their team.
@@ -85,6 +87,10 @@ for them to interrupt you, making this ability difficult to use. More often than
 you will simply get stunned right after you've started to channel. This is why you
 have to surprise your opponents, blink in after they have already used their stuns
 and hope they don't burst you down too quickly or saved one stun for you.
+
+It is always good to get the first level of your ultimate as you reach level 6,
+but since the mana cost doubles on level two, it makes sense to delay leveling it
+further until you have the mana pool to support it.
 
 ## Items
 
@@ -136,7 +142,7 @@ easily by most heroes and your carry might not always be able to help you.
 
 If your carry is able to free farm in lane, you can shift over to the jungle and kill
 the big creeps in the large camp with <%= ability :crystal_maiden_frostbite %> and
-stack them at the same time. If your lane is pushed out, you can also do pulls.
+stack them at the same time. If your lane is pushed out, you can also do [pulls](/mechanics/pulling/).
 
 #### Teamfighting
 
