@@ -1,5 +1,9 @@
+//= require 'leaflet'
+//= require 'qtip2/jquery.qtip'
+
 @import 'variables';
 @import 'bootstrap';
+
 
 .navbar {
   margin-bottom: 15px;
@@ -43,4 +47,8 @@
 
 .heroes .card .list-group-item {
   border: none;
+}
+
+.map {
+  height: 400px;
 }

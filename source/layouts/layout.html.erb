@@ -10,7 +10,6 @@
 
     <%= stylesheet_link_tag "all" %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.css">
 
   </head>
 
@@ -20,7 +19,6 @@
         <a class="navbar-brand" href="/">Sentry</a>
         <ul class="nav navbar-nav">
           <li class="nav-item <% if current_page.url == "/heroes/" %>active<% end %>"><a class="nav-link" href="/heroes/">Heroes</a></li>
-          <li class="nav-item <% if current_page.url == "/items/" %>active<% end %>"><a class="nav-link" href="/items/">Items</a></li>
           <li class="nav-item <% if current_page.url == "/mechanics/" %>active<% end %>"><a class="nav-link" href="/mechanics/">Mechanics</a></li>
         </ul>
         <form class="form-inline navbar-form pull-right" role="search">
@@ -39,7 +37,6 @@
       </div>
     </div>
     <%= javascript_include_tag  "all" %>
-    <script src="https://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.js"></script>
     <% if content_for?(:scripts) %>
       <%= yield_content :scripts %>
     <% end %>

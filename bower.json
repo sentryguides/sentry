@@ -19,6 +19,7 @@
   "dependencies": {
     "tether": "git://github.com/HubSpot/tether.git#~1.1.1",
     "bootstrap": "git://github.com/twbs/bootstrap.git#v4-dev",
-    "qTip2": "~2.2.1"
+    "leaflet": "~0.7.5",
+    "qtip2": "~2.2.1"
   }
 }
