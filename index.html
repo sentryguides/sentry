@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <link rel="icon" type="image/png" href="/images/logo-4b9a0f4a.png">
+
+    <title>Sentry Guides</title>
+
+    <link href="/stylesheets/all-f3f40156.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  </head>
+
+  <body class="index">
+    <nav class="navbar navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="/">Sentry</a>
+        <ul class="nav navbar-nav">
+          <li class="nav-item "><a class="nav-link" href="/heroes/">Heroes</a></li>
+          <li class="nav-item "><a class="nav-link" href="/mechanics/">Mechanics</a></li>
+        </ul>
+        <form class="form-inline navbar-form pull-right" role="search">
+          <input type="text" class="st-default-search-input" placeholder="Search">
+        </form>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-block text-center">
+        <h2>Uncover your hidden Dota skills</h2>
+        <h4>Sentry provides high-quality guides that are constantly improved by the Community.</h4>
+        <p>
+              <a href="/heroes/crystal_maiden/">
+                <img src="/images/dota/heroes/crystal_maiden-b2afb422.png" alt="Crystal Maiden" title="Crystal Maiden" width="100">
+              </a>
+              <a href="/heroes/dark_seer/">
+                <img src="/images/dota/heroes/dark_seer-6f0b0fc4.png" alt="Dark Seer" title="Dark Seer" width="100">
+              </a>
+              <a href="/heroes/phantom_assassin/">
+                <img src="/images/dota/heroes/phantom_assassin-5ab0e96e.png" alt="Phantom Assassin" title="Phantom Assassin" width="100">
+              </a>
+              <a href="/heroes/weaver/">
+                <img src="/images/dota/heroes/weaver-4c436821.png" alt="Weaver" title="Weaver" width="100">
+              </a>
+        </p>
+        <p><a class="btn btn-primary" href="/heroes/">View All</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-md-9">
+    <div class="card">
+      <div class="card-header">Latest Blog Posts</div>
+      <ul class="list-group">
+          <li class="list-group-item">
+            <time>Oct 14 2015</time>
+            <h3><a href="/blog/2015/10/14/introducing-sentry/">Introducing Sentry</a></h3>
+            <p>If you want to learn a new hero you've never touched before, what do you to? You can go to Dotabuff
+and look at what other people are doing. It shows which items they buy and in
+what order they get their abilities, but it doesn't help with the <strong>WHY</strong>.
+The why is very imporant, as many things in Dota are situational, and to improve
+at the game has a lot to do with doing the right thing in the right situation.</p>
+
+<p>There are a few other sites that offer guides. Most of them
+allow users to submit their own guides, so there are many guides for each hero.
+The problem with that is that you now have to decide which guide you read,
+which is somewhat difficult because you don't know anything about the hero in the first
+place, how will you know if something in the guide is wrong? Their authors also tend
+to not keep their guides updated constantly, so even if a guide is highly rated, it
+probably does not apply to the patch that was released last week.</p>
+
+<p>Sentry is here to fix this situation. For each hero, there is exactly <strong>one</strong> guide.
+Everyone can contribute to improve the guides, changes are then reviewed by our
+core contributors. This should ensure they are of high quality and constantly updated
+as Dota patches get released.</p>
+
+<p>To make this possible, we need <strong>YOUR</strong> help! You can improve our guides or
+write new ones. If you know a few things about web design, there is a lot to do in
+that area, too.</p>
+
+<div class="text-center">
+<a class="btn btn-primary" href="/contribute/">Read our Contributor Guide</a>
+</div>
+
+          </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card">
+      <div class="card-header">Sentry Links</div>
+      <div class="card-block text-center">
+        <a href="https://forum.sentryguides.com/" title="Forum"><i class="fa fa-comment fa-2x"></i></a>
+        <a href="https://www.youtube.com/channel/UCm6uFNjw0vR0tDWs-imMFKg" title="Youtube Channel"><i class="fa fa-youtube fa-2x"></i></a>
+        <a href="https://github.com/sentryguides/sentry" title="GitHub Repository"><i class="fa fa-github fa-2x"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card">
+      <div class="card-header">Latest Forum Topics</div>
+      <ul class="list-group latest-posts"></ul>
+    </div>
+  </div>
+
+</div>
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-muted">
+            Dota 2 is a registered trademark of Valve Corporation.
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/javascripts/all-06f722ca.js"></script>
+        <script>
+  var json = 'https://forum.sentryguides.com/latest.json';
+  var $el = $('.latest-posts');
+  $.getJSON(json).done(function (latest) {
+    latest.topic_list.topics.forEach(function (topic) {
+      $el.append('<li class="list-group-item"><a href="https://forum.sentryguides.com/t/' + topic.slug + '">' + topic.title + '</a></li>');
+    });
+  });
+  </script>
+
+  </body>
+</html>
