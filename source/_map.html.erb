@@ -1,0 +1,23 @@
+ <div class="map" id="map"></div>
+
+<% content_for :scripts do %>
+  <script>
+  var projector = L.Projection.SphericalMercator;
+  var map = L.map('map').setView([0, 0], 0);
+
+  // [8194, 7542], [8194, -7666]
+
+  var southWest = projector.unproject(L.point(-8200, -7558));
+  var northEast = projector.unproject(L.point(8200, 7558));
+
+    L.tileLayer('http://devilesk.com/dota2/apps/interactivemap2/tiles/{z}/tile_{x}_{y}.png', {
+      maxBounds: [southWest, northEast],
+      maxZoom: 2,
+      continuousWorld: 'true'
+  }).addTo(map);
+
+  map.on('click', function(e) {
+    console.log("Lat, Lon : " + projector.project(e.latlng) + ", " + projector.project(e.latlng))
+});
+  </script>
+<% end %>

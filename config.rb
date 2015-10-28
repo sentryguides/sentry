@@ -12,6 +12,8 @@ set :images_dir, 'images'
 
 sprockets.append_path File.join root, 'bower_components'
 
+sprockets.import_asset 'leaflet'
+
 page "/404.html", :directory_index => false
 
 ###
